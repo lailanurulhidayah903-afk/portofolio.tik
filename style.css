@@ -1,0 +1,167 @@
+:root {
+    --navy-primary: #1a237e;
+    --navy-dark: #0d124a;
+    --navy-light: #283593;
+    --white: #ffffff;
+    --accent: #64b5f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--navy-dark);
+    color: var(--white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: var(--navy-primary);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li { margin-left: 25px; }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(var(--navy-primary), var(--navy-dark));
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.tagline { font-size: 1.1rem; opacity: 0.9; color: var(--accent); }
+
+section { padding: 80px 12%; text-align: center; }
+.bg-alt { background-color: var(--navy-light); }
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--accent);
+    margin: 10px auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: var(--navy-primary);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.skill-item i { color: var(--accent); margin-right: 10px; }
+
+footer {
+    padding: 50px;
+    background: var(--navy-dark);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-icons { margin-bottom: 20px; }
+.social-icons a { color: white; font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+.social-icons a:hover { color: var(--accent); }
+/* Gaya Ikon Sosial Media di Footer */
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 2.2rem; /* Ukuran ikon sedikit diperbesar */
+    margin: 0 15px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* Warna saat kursor menyentuh ikon (Hover) */
+.social-icons a:hover {
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+/* Warna khusus WhatsApp saat hover */
+.social-icons a:nth-child(2):hover {
+    color: #25D366;
+}
+
+/* Warna khusus Instagram saat hover */
+.instagram-icon:hover {
+    color: #E1306C; /* Warna khas Instagram */
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
